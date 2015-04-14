@@ -10,10 +10,13 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface Index : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface Index : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate>
 {
     
 }
+//TextFields
+
+@property (strong, nonatomic) IBOutlet UITextField *txNameGeolocation;
 
 //Mapa
 @property (strong, nonatomic) IBOutlet MKMapView *mkMapa;

@@ -57,6 +57,27 @@
     lpgr.minimumPressDuration = 1.0; //user needs to press for 2 seconds
     [self.mkMapa addGestureRecognizer:lpgr];
     
+    //Keyboard hide when user tap out
+    
+    
+    UITapGestureRecognizer *tapGestureImagenUser = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    [tapGestureImagenUser setCancelsTouchesInView:NO];
+    [tapGestureImagenUser setDelegate:self];
+    [self.view addGestureRecognizer:tapGestureImagenUser];
+    
+}
+
+-(void)handleTapGesture:(UITapGestureRecognizer *)gesture
+{
+    [self hideKeyboard];
+}
+
+-(void)hideKeyboard
+{
+    // Hide
+    if (self.txNameGeolocation.resignFirstResponder)
+        [self.txNameGeolocation resignFirstResponder];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,16 +115,7 @@
 
 - (IBAction)btnSaveSender:(id)sender {
     //Add subview to show Share Windows with map
-    
-    /*UIViewController *viewControllerYouWantToPresentOnTop = [[UIViewController alloc] initWithNibName:nil bundle:nil];
-    
-    //Create transparent host view for presenting the above view
-    Share *shareView = [[Share alloc] init];
-    [self.view addSubview:[shareView view]];
-    
-    //Make your transparent view controller present your actual view controller
-    [shareView presentViewController:viewControllerYouWantToPresentOnTop animated:YES completion:nil];*/
-    
+    /*
     Share *shareView = [[Share alloc] init];
     
     NSLog(@"Gesture recognizer Latitude: %f and Longitude: %f", zoomLocation.latitude, zoomLocation.longitude);
@@ -112,7 +124,24 @@
     
     //shareView.coord.latitude = zoomLocation.latitude;
     
-    [self.navigationController pushViewController:shareView animated:YES];
+    [self.navigationController pushViewController:shareView animated:YES];*/
+    
+    //Properties to share with friends
+    
+    NSArray *activityItems;
+    UIActivityViewController *actVC;
+    
+    
+    //Message with data
+    NSString *strMsg =[NSString stringWithFormat:@"Galileo Guzmán ha compartido contigo la siguiente ubicación https://www.google.com.mx/maps/@%f,%f,15z?hl=es", zoomLocation.latitude, zoomLocation.longitude];
+    activityItems = @[self.mkMapa, self.txNameGeolocation.text, strMsg];
+    
+    //Reset textfields
+    self.txNameGeolocation = nil;
+    //Init activity view controller
+    actVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    actVC.excludedActivityTypes = [NSArray arrayWithObjects:UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypeAirDrop, nil];
+    [self presentViewController:actVC animated:YES completion:nil];
     
 }
 
