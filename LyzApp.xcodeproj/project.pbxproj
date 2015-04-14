@@ -11,6 +11,9 @@
 		F22E6BAF1ADCF6B800890093 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22E6BAE1ADCF6B800890093 /* MapKit.framework */; };
 		F24728E01ADD5B85002DB57F /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = F24728DF1ADD5B85002DB57F /* location.png */; };
 		F24728E41ADD63C7002DB57F /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F24728E31ADD63C7002DB57F /* CustomAnnotation.m */; };
+		F24728E81ADD767E002DB57F /* GeolocationLyz.m in Sources */ = {isa = PBXBuildFile; fileRef = F24728E71ADD767E002DB57F /* GeolocationLyz.m */; };
+		F24728EE1ADD8215002DB57F /* Share.m in Sources */ = {isa = PBXBuildFile; fileRef = F24728EC1ADD8215002DB57F /* Share.m */; };
+		F24728EF1ADD8215002DB57F /* Share.xib in Resources */ = {isa = PBXBuildFile; fileRef = F24728ED1ADD8215002DB57F /* Share.xib */; };
 		F292BFAF1ADCD17400C651C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F292BFAE1ADCD17400C651C6 /* main.m */; };
 		F292BFB21ADCD17400C651C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F292BFB11ADCD17400C651C6 /* AppDelegate.m */; };
 		F292BFB51ADCD17400C651C6 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = F292BFB41ADCD17400C651C6 /* Login.m */; };
@@ -61,6 +64,11 @@
 		F24728DF1ADD5B85002DB57F /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		F24728E21ADD63C7002DB57F /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
 		F24728E31ADD63C7002DB57F /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
+		F24728E61ADD767E002DB57F /* GeolocationLyz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeolocationLyz.h; sourceTree = "<group>"; };
+		F24728E71ADD767E002DB57F /* GeolocationLyz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeolocationLyz.m; sourceTree = "<group>"; };
+		F24728EB1ADD8215002DB57F /* Share.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Share.h; sourceTree = "<group>"; };
+		F24728EC1ADD8215002DB57F /* Share.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Share.m; sourceTree = "<group>"; };
+		F24728ED1ADD8215002DB57F /* Share.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Share.xib; sourceTree = "<group>"; };
 		F292BFA91ADCD17400C651C6 /* LyzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F292BFAD1ADCD17400C651C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F292BFAE1ADCD17400C651C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -156,6 +164,25 @@
 			name = CustomAnnotation;
 			sourceTree = "<group>";
 		};
+		F24728E51ADD7644002DB57F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F24728E61ADD767E002DB57F /* GeolocationLyz.h */,
+				F24728E71ADD767E002DB57F /* GeolocationLyz.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		F24728E91ADD81F0002DB57F /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				F24728EB1ADD8215002DB57F /* Share.h */,
+				F24728EC1ADD8215002DB57F /* Share.m */,
+				F24728ED1ADD8215002DB57F /* Share.xib */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
 		F292BFA01ADCD17400C651C6 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +204,8 @@
 		F292BFAB1ADCD17400C651C6 /* LyzApp */ = {
 			isa = PBXGroup;
 			children = (
+				F24728E91ADD81F0002DB57F /* Share */,
+				F24728E51ADD7644002DB57F /* Classes */,
 				F24728E11ADD63A6002DB57F /* CustomAnnotation */,
 				F22E6BAA1ADCF51C00890093 /* Index */,
 				F292C0021ADCE3D800C651C6 /* Resources */,
@@ -381,6 +410,7 @@
 				F292C00C1ADCEBE200C651C6 /* Media.xcassets in Resources */,
 				F292BFBD1ADCD17400C651C6 /* LaunchScreen.xib in Resources */,
 				F24728E01ADD5B85002DB57F /* location.png in Resources */,
+				F24728EF1ADD8215002DB57F /* Share.xib in Resources */,
 				F292BFBA1ADCD17400C651C6 /* Images.xcassets in Resources */,
 				F292C0041ADCE3F500C651C6 /* Image.png in Resources */,
 				F292C0091ADCE7BE00C651C6 /* grancanon.jpg in Resources */,
@@ -407,7 +437,9 @@
 				F292BFFF1ADCE37000C651C6 /* CRMotionView.m in Sources */,
 				F22E6BAD1ADCF53400890093 /* Index.m in Sources */,
 				F292BFF71ADCDAC700C651C6 /* DetailsUser.m in Sources */,
+				F24728EE1ADD8215002DB57F /* Share.m in Sources */,
 				F292C0001ADCE37000C651C6 /* CRZoomScrollView.m in Sources */,
+				F24728E81ADD767E002DB57F /* GeolocationLyz.m in Sources */,
 				F292C0011ADCE37000C651C6 /* UIScrollView+CRScrollIndicator.m in Sources */,
 				F292BFB21ADCD17400C651C6 /* AppDelegate.m in Sources */,
 				F292BFAF1ADCD17400C651C6 /* main.m in Sources */,

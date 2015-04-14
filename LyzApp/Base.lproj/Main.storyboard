@@ -49,6 +49,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BML-nW-e6f">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.041279698560000001" green="0.82668481689999995" blue="0.36453538489999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="nZV-2r-WYN" kind="relationship" relationship="rootViewController" id="Tcb-iD-Dkj"/>
@@ -67,15 +68,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="fII-vh-C7L">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="403"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="474"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QYx-dI-aC7">
-                                <rect key="frame" x="16" y="411" width="288" height="42"/>
+                                <rect key="frame" x="16" y="491" width="288" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.041279698561486076" green="0.82668481691919193" blue="0.36453538487567905" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Save">
+                                <state key="normal" title="Share">
                                     <color key="titleColor" red="0.99275928420000004" green="0.97762065949999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -88,6 +89,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8vD-ej-FOs">
                         <barButtonItem key="rightBarButtonItem" image="location.png" style="done" id="Tf2-aF-E8O">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="btnGetCurrentLocation:" destination="nZV-2r-WYN" id="Sr1-M0-Cpm"/>
                             </connections>
@@ -103,7 +105,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="location.png" width="32" height="32"/>
+        <image name="location.png" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

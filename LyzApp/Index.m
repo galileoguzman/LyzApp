@@ -8,6 +8,8 @@
 
 #import "Index.h"
 #import "CustomAnnotation.h"
+#import "Share.h"
+#import "GeolocationLyz.h"
 
 #define METERS_PER_MILE 1609.344
 
@@ -85,10 +87,33 @@
     
     NSLog(@"Gesture recognizer Latitude: %f and Longitude: %f", touchMapCoordinate.latitude, touchMapCoordinate.longitude);
     
+    zoomLocation = touchMapCoordinate;
+    
     [self.mkMapa addAnnotation:annot];
 }
 
 - (IBAction)btnSaveSender:(id)sender {
+    //Add subview to show Share Windows with map
+    
+    /*UIViewController *viewControllerYouWantToPresentOnTop = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+    
+    //Create transparent host view for presenting the above view
+    Share *shareView = [[Share alloc] init];
+    [self.view addSubview:[shareView view]];
+    
+    //Make your transparent view controller present your actual view controller
+    [shareView presentViewController:viewControllerYouWantToPresentOnTop animated:YES completion:nil];*/
+    
+    Share *shareView = [[Share alloc] init];
+    
+    NSLog(@"Gesture recognizer Latitude: %f and Longitude: %f", zoomLocation.latitude, zoomLocation.longitude);
+    
+    [shareView.geo initWithCordinate:zoomLocation];
+    
+    //shareView.coord.latitude = zoomLocation.latitude;
+    
+    [self.navigationController pushViewController:shareView animated:YES];
+    
 }
 
 - (IBAction)btnGetCurrentLocation:(id)sender {
@@ -118,8 +143,6 @@
     currentLocation = newLocation;
     
     if (currentLocation != nil) {
-        //longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
-        //latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
         
         zoomLocation.latitude = currentLocation.coordinate.latitude;
         zoomLocation.longitude= currentLocation.coordinate.longitude;
