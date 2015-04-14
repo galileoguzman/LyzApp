@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F22E6BAD1ADCF53400890093 /* Index.m in Sources */ = {isa = PBXBuildFile; fileRef = F22E6BAC1ADCF53400890093 /* Index.m */; };
+		F22E6BAF1ADCF6B800890093 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22E6BAE1ADCF6B800890093 /* MapKit.framework */; };
+		F24728E01ADD5B85002DB57F /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = F24728DF1ADD5B85002DB57F /* location.png */; };
+		F24728E41ADD63C7002DB57F /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F24728E31ADD63C7002DB57F /* CustomAnnotation.m */; };
 		F292BFAF1ADCD17400C651C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F292BFAE1ADCD17400C651C6 /* main.m */; };
 		F292BFB21ADCD17400C651C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F292BFB11ADCD17400C651C6 /* AppDelegate.m */; };
 		F292BFB51ADCD17400C651C6 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = F292BFB41ADCD17400C651C6 /* Login.m */; };
@@ -51,6 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F22E6BAB1ADCF53400890093 /* Index.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Index.h; sourceTree = "<group>"; };
+		F22E6BAC1ADCF53400890093 /* Index.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Index.m; sourceTree = "<group>"; };
+		F22E6BAE1ADCF6B800890093 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F24728DF1ADD5B85002DB57F /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		F24728E21ADD63C7002DB57F /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
+		F24728E31ADD63C7002DB57F /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
 		F292BFA91ADCD17400C651C6 /* LyzApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyzApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F292BFAD1ADCD17400C651C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F292BFAE1ADCD17400C651C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22E6BAF1ADCF6B800890093 /* MapKit.framework in Frameworks */,
 				F292BFF11ADCD97300C651C6 /* libsqlite3.dylib in Frameworks */,
 				F292BFEF1ADCD96800C651C6 /* libz.dylib in Frameworks */,
 				F292BFED1ADCD95E00C651C6 /* SystemConfiguration.framework in Frameworks */,
@@ -127,6 +138,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F22E6BAA1ADCF51C00890093 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				F22E6BAB1ADCF53400890093 /* Index.h */,
+				F22E6BAC1ADCF53400890093 /* Index.m */,
+			);
+			name = Index;
+			sourceTree = "<group>";
+		};
+		F24728E11ADD63A6002DB57F /* CustomAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				F24728E21ADD63C7002DB57F /* CustomAnnotation.h */,
+				F24728E31ADD63C7002DB57F /* CustomAnnotation.m */,
+			);
+			name = CustomAnnotation;
+			sourceTree = "<group>";
+		};
 		F292BFA01ADCD17400C651C6 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +177,8 @@
 		F292BFAB1ADCD17400C651C6 /* LyzApp */ = {
 			isa = PBXGroup;
 			children = (
+				F24728E11ADD63A6002DB57F /* CustomAnnotation */,
+				F22E6BAA1ADCF51C00890093 /* Index */,
 				F292C0021ADCE3D800C651C6 /* Resources */,
 				F292BFF81ADCE34F00C651C6 /* CRMotionView */,
 				F292BFF41ADCDAAF00C651C6 /* DetailsUser */,
@@ -215,6 +246,7 @@
 			children = (
 				F292BFF01ADCD97300C651C6 /* libsqlite3.dylib */,
 				F292BFEE1ADCD96800C651C6 /* libz.dylib */,
+				F22E6BAE1ADCF6B800890093 /* MapKit.framework */,
 				F292BFEC1ADCD95E00C651C6 /* SystemConfiguration.framework */,
 				F292BFEA1ADCD95400C651C6 /* StoreKit.framework */,
 				F292BFE81ADCD94B00C651C6 /* Security.framework */,
@@ -253,6 +285,7 @@
 		F292C0021ADCE3D800C651C6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F24728DF1ADD5B85002DB57F /* location.png */,
 				F292C00B1ADCEBE200C651C6 /* Media.xcassets */,
 				F292C0071ADCE7BE00C651C6 /* grancanon.jpg */,
 				F292C0081ADCE7BE00C651C6 /* paris.png */,
@@ -347,6 +380,7 @@
 				F292C0061ADCE6F800C651C6 /* times-square.jpg in Resources */,
 				F292C00C1ADCEBE200C651C6 /* Media.xcassets in Resources */,
 				F292BFBD1ADCD17400C651C6 /* LaunchScreen.xib in Resources */,
+				F24728E01ADD5B85002DB57F /* location.png in Resources */,
 				F292BFBA1ADCD17400C651C6 /* Images.xcassets in Resources */,
 				F292C0041ADCE3F500C651C6 /* Image.png in Resources */,
 				F292C0091ADCE7BE00C651C6 /* grancanon.jpg in Resources */,
@@ -368,8 +402,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24728E41ADD63C7002DB57F /* CustomAnnotation.m in Sources */,
 				F292BFB51ADCD17400C651C6 /* Login.m in Sources */,
 				F292BFFF1ADCE37000C651C6 /* CRMotionView.m in Sources */,
+				F22E6BAD1ADCF53400890093 /* Index.m in Sources */,
 				F292BFF71ADCDAC700C651C6 /* DetailsUser.m in Sources */,
 				F292C0001ADCE37000C651C6 /* CRZoomScrollView.m in Sources */,
 				F292C0011ADCE37000C651C6 /* UIScrollView+CRScrollIndicator.m in Sources */,
@@ -587,6 +623,7 @@
 				F292BFCE1ADCD17400C651C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F292BFCF1ADCD17400C651C6 /* Build configuration list for PBXNativeTarget "LyzAppTests" */ = {
 			isa = XCConfigurationList;
@@ -595,6 +632,7 @@
 				F292BFD11ADCD17400C651C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

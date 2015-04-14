@@ -10,6 +10,10 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
+CLLocationManager *locationManager;
+
+@import CoreLocation;
+
 @interface AppDelegate ()
 
 @end
@@ -19,6 +23,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    locationManager = [[CLLocationManager alloc] init];
+    
+    [locationManager requestWhenInUseAuthorization];
+    [locationManager requestAlwaysAuthorization];
     
     //Parse
     [Parse setApplicationId:@"3ad2SvxaZbWG02Zg7zaudlTNhUfJte9FtMqNxj5g"

@@ -47,5 +47,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Usaremos tu localización para brindarte una mejor experiencia.</string>
 </dict>
 </plist>

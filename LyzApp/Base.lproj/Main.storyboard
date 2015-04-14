@@ -34,37 +34,77 @@
                     <connections>
                         <outlet property="activityIndicator" destination="gDC-3C-H4N" id="K1D-vI-agA"/>
                         <outlet property="btnLoginWithFb" destination="UjZ-il-RV5" id="fcU-iw-mcP"/>
-                        <segue destination="sbv-Ds-c7t" kind="custom" identifier="GoToDetails" id="6yf-2a-oMb"/>
+                        <segue destination="7Wa-zT-xGh" kind="custom" identifier="GoToIndex" id="rQL-T1-Exm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="319"/>
+            <point key="canvasLocation" x="-208" y="166"/>
         </scene>
-        <!--Details User-->
-        <scene sceneID="CeV-hD-kSd">
+        <!--Navigation Controller-->
+        <scene sceneID="fhj-tx-scr">
             <objects>
-                <viewController id="sbv-Ds-c7t" customClass="DetailsUser" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="N9F-gr-oHO">
+                <navigationController id="7Wa-zT-xGh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rzS-Gb-YOD"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BML-nW-e6f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nZV-2r-WYN" kind="relationship" relationship="rootViewController" id="Tcb-iD-Dkj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y1W-hD-Eq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="166"/>
+        </scene>
+        <!--Index-->
+        <scene sceneID="Jzi-M5-3PI">
+            <objects>
+                <viewController id="nZV-2r-WYN" customClass="Index" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Dh-73-ncu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detalles Paw Paw" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wNE-I9-GAV">
-                                <rect key="frame" x="16" y="53" width="288" height="21"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="fII-vh-C7L">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="403"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QYx-dI-aC7">
+                                <rect key="frame" x="16" y="411" width="288" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" red="0.041279698561486076" green="0.82668481691919193" blue="0.36453538487567905" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.99275928420000004" green="0.97762065949999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSaveSender:" destination="nZV-2r-WYN" eventType="touchUpInside" id="ksJ-Nh-hKM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8vD-ej-FOs">
+                        <barButtonItem key="rightBarButtonItem" image="location.png" style="done" id="Tf2-aF-E8O">
+                            <connections>
+                                <action selector="btnGetCurrentLocation:" destination="nZV-2r-WYN" id="Sr1-M0-Cpm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mkMapa" destination="fII-vh-C7L" id="hQm-GX-i8c"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F3h-eg-C3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3J-HH-wZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="543" y="319"/>
+            <point key="canvasLocation" x="793" y="166"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location.png" width="32" height="32"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -87,7 +87,7 @@
 }
 
 - (void)_startApplicationWithUser:(BOOL)animated {
-    [self performSegueWithIdentifier:@"GoToDetails" sender:self];
+    [self performSegueWithIdentifier:@"GoToIndex" sender:self];
 }
 
 - (CRMotionView *)motionViewWithImage
