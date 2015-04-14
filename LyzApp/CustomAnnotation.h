@@ -29,6 +29,6 @@
 
 // Y el método de inicialización
 - (id)initWithTitle:(NSString *)aTitle subtitle:(NSString*)aSubtitle andCoordinate:(CLLocationCoordinate2D)coord;
-
+- (id)initWithCordinate:(CLLocationCoordinate2D)coord;
 
 @end

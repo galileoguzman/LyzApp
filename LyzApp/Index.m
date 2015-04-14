@@ -49,6 +49,12 @@
     // 3
     [_mkMapa setRegion:viewRegion animated:YES];
     
+    
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
+                                          initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = 1.0; //user needs to press for 2 seconds
+    [self.mkMapa addGestureRecognizer:lpgr];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,6 +71,22 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateBegan)
+        return;
+    
+    CGPoint touchPoint = [gestureRecognizer locationInView:self.mkMapa];
+    CLLocationCoordinate2D touchMapCoordinate = [self.mkMapa convertPoint:touchPoint toCoordinateFromView:self.view];
+    
+    CustomAnnotation *annot = [[CustomAnnotation alloc] init];
+    [annot initWithCordinate:touchMapCoordinate];
+    
+    NSLog(@"Gesture recognizer Latitude: %f and Longitude: %f", touchMapCoordinate.latitude, touchMapCoordinate.longitude);
+    
+    [self.mkMapa addAnnotation:annot];
+}
 
 - (IBAction)btnSaveSender:(id)sender {
 }

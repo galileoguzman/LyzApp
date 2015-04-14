@@ -22,5 +22,11 @@
     coordinate = coord;
     return self;
 }
+- (id)initWithCordinate:(CLLocationCoordinate2D)coord
+{
+    self = [super init];
+    coordinate = coord;
+    return self;
+}
 
 @end
